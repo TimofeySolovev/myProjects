@@ -1,6 +1,6 @@
-Целью проекта является ***создание класса «Matrix» для работы с матрицами на языке программирования C++.***
+Целью проекта является ***создание класса «Матрица» для работы с матрицами на языке программирования C++.*** Файл «matrix.h» содержит основной класс и подклассы. В файле «matrix.cpp» реализованы методы и операторы. Файл «main.cpp» содержит функцию main, в которой находится код программы. 
 
-The aim of this project is to ***create a class «Matrix» to operate with matrices in the C++ programming language.***
+The aim of this project is to ***create a class «Matrix» to operate with matrices in the C++ programming language.*** The «matrix.h» file contains the main class and subclasses. Methods and operators are implemented in the «matrix.cpp» file. The «main» function that contains the program code is in the «main.cpp» file.
 
 Стек технологий:
 - С++ (Среда: Visual Studio 2019, Библиотеки: iostream, iomanip, array, cmath, cstdlib, algorithm)
