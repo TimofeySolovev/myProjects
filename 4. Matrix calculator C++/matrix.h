@@ -10,47 +10,47 @@ public:
 	MatrixException() : problem("") {}
 	MatrixException(const char* reason) : problem(reason) {}
 };
-
+Р°
 class Matrix {
 
 protected:
-	double** mat; // матрица
-	int rows; // количество строк в матрице
-	int cols; // количество столбцов в матрице
+	double** mat; // Г¬Г ГІГ°ГЁГ¶Г 
+	int rows; // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ°Г®ГЄ Гў Г¬Г ГІГ°ГЁГ¶ГҐ
+	int cols; // ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±ГІГ®Г«ГЎГ¶Г®Гў Гў Г¬Г ГІГ°ГЁГ¶ГҐ
 
-	friend istream& operator >> (istream&, Matrix&); // перегруженный оператор ввода
-	friend ostream& operator << (ostream&, const Matrix&); // перегруженный оператор вывода
+	friend istream& operator >> (istream&, Matrix&); // ГЇГҐГ°ГҐГЈГ°ГіГ¦ГҐГ­Г­Г»Г© Г®ГЇГҐГ°Г ГІГ®Г° ГўГўГ®Г¤Г 
+	friend ostream& operator << (ostream&, const Matrix&); // ГЇГҐГ°ГҐГЈГ°ГіГ¦ГҐГ­Г­Г»Г© Г®ГЇГҐГ°Г ГІГ®Г° ГўГ»ГўГ®Г¤Г 
 
 public:
-	Matrix();// конструктор по умолчанию
-	Matrix(int, int); // конструктор с параметрами
-	Matrix(const Matrix&); // конструктор копии
-	~Matrix(); // деструктор
+	Matrix();// ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
+	Matrix(int, int); // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г± ГЇГ Г°Г Г¬ГҐГІГ°Г Г¬ГЁ
+	Matrix(const Matrix&); // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ®ГЇГЁГЁ
+	~Matrix(); // Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
 
-	double& operator () (int, int); // оператор взятия индекса
-	const Matrix& operator = (const Matrix&); // оператор присваивания
+	double& operator () (int, int); // Г®ГЇГҐГ°Г ГІГ®Г° ГўГ§ГїГІГЁГї ГЁГ­Г¤ГҐГЄГ±Г 
+	const Matrix& operator = (const Matrix&); // Г®ГЇГҐГ°Г ГІГ®Г° ГЇГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГї
 
-	Matrix operator + (const Matrix&); // сложение
-	Matrix operator - (const Matrix&); // вычитание
-	Matrix operator * (const Matrix&); // умножение
-	Matrix operator ^ (const Matrix&); // произведение Адамара
-	Matrix operator * (double); // умножение на число справа
-	friend Matrix operator * (double, Matrix); // умножение на число слева
+	Matrix operator + (const Matrix&); // Г±Г«Г®Г¦ГҐГ­ГЁГҐ
+	Matrix operator - (const Matrix&); // ГўГ»Г·ГЁГІГ Г­ГЁГҐ
+	Matrix operator * (const Matrix&); // ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ
+	Matrix operator ^ (const Matrix&); // ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ ГЂГ¤Г Г¬Г Г°Г 
+	Matrix operator * (double); // ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ Г­Г  Г·ГЁГ±Г«Г® Г±ГЇГ°Г ГўГ 
+	friend Matrix operator * (double, Matrix); // ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ Г­Г  Г·ГЁГ±Г«Г® Г±Г«ГҐГўГ 
 
-	// методы для ЛР 2
-	double tr(); // след матрицы
-	double det(); // определитель матрицы
-	double scalar(const Matrix&); // скалярное произведение
-	Matrix vector(const Matrix&); // векторное произведение
-	double euclNorm(); // евклидова норма
-	double maxNorm(); // максимальная норма
-	double frobNorm(); // норма Фробениуса
+	// Г¬ГҐГІГ®Г¤Г» Г¤Г«Гї Г‹Гђ 2
+	double tr(); // Г±Г«ГҐГ¤ Г¬Г ГІГ°ГЁГ¶Г»
+	double det(); // Г®ГЇГ°ГҐГ¤ГҐГ«ГЁГІГҐГ«Гј Г¬Г ГІГ°ГЁГ¶Г»
+	double scalar(const Matrix&); // Г±ГЄГ Г«ГїГ°Г­Г®ГҐ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ
+	Matrix vector(const Matrix&); // ГўГҐГЄГІГ®Г°Г­Г®ГҐ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ
+	double euclNorm(); // ГҐГўГЄГ«ГЁГ¤Г®ГўГ  Г­Г®Г°Г¬Г 
+	double maxNorm(); // Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г Гї Г­Г®Г°Г¬Г 
+	double frobNorm(); // Г­Г®Г°Г¬Г  Г”Г°Г®ГЎГҐГ­ГЁГіГ±Г 
 
-	// методы для ЛР 3
-	double angle(const Matrix&); // угол между векторами
-	double rank(); // ранг матрицы
-	Matrix reverse(); // обратная матрица
-	Matrix transpose(); // транспонированная матрица
+	// Г¬ГҐГІГ®Г¤Г» Г¤Г«Гї Г‹Гђ 3
+	double angle(const Matrix&); // ГіГЈГ®Г« Г¬ГҐГ¦Г¤Гі ГўГҐГЄГІГ®Г°Г Г¬ГЁ
+	double rank(); // Г°Г Г­ГЈ Г¬Г ГІГ°ГЁГ¶Г»
+	Matrix reverse(); // Г®ГЎГ°Г ГІГ­Г Гї Г¬Г ГІГ°ГЁГ¶Г 
+	Matrix transpose(); // ГІГ°Г Г­Г±ГЇГ®Г­ГЁГ°Г®ГўГ Г­Г­Г Гї Г¬Г ГІГ°ГЁГ¶Г 
 };
 
 class Edinichnaya : public Matrix {
